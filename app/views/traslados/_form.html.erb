@@ -1,0 +1,38 @@
+<%= form_with(model: traslado, local: true) do |form| %>
+  <% if traslado.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(traslado.errors.count, "error") %> prohibited this traslado from being saved:</h2>
+
+      <ul>
+      <% traslado.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+  <div class="field">
+    <%= form.label :direccion_origen %>
+    <%= form.text_field :direccion_origen %>
+  </div>
+
+  <div class="field">
+    <%= form.label :direccion_destino %>
+    <%= form.text_field :direccion_destino %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha %>
+    <%= form.date_select :fecha %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

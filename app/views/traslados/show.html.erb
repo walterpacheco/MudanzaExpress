@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @traslado.user %>
+</p>
+
+<p>
+  <strong>Empresa:</strong>
+  <%= @traslado.empresa %>
+</p>
+
+<p>
+  <strong>Direccion origen:</strong>
+  <%= @traslado.direccion_origen %>
+</p>
+
+<p>
+  <strong>Direccion destino:</strong>
+  <%= @traslado.direccion_destino %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @traslado.fecha %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @traslado.price %>
+</p>
+
+<%= link_to 'Edit', edit_traslado_path(@traslado) %> |
+<%= link_to 'Back', traslados_path %>
